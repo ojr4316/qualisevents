@@ -1,0 +1,81 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.navbar {
+  background-color: white;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 64px;
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: calc(100% - var(--header-height));
+}
+
+.link {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: var(--gray4);
+  cursor: pointer;
+}
+
+.link_button {
+  padding: 8px 32px;
+  border: 4px solid var(--gray4);
+  cursor: pointer;
+}
+
+.flex_third {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 0;
+}
+
+.flex_third_col {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+}
+
+.footer {
+  background-color: var(--black);
+  height: var(--footer-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 64px;
+}
+
+.footer_name {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.footer_text {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer_icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 16px;
+  color: var(--white);
+}

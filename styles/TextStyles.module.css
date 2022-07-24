@@ -1,0 +1,25 @@
+.info_text,
+.info_text_inverted {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--black);
+  border-left: 2px solid var(--black);
+  padding: 8px 16px;
+  margin: 16px 0;
+}
+
+.info_text_inverted {
+  color: var(--white);
+  border-left: 2px solid var(--white);
+}
+
+.title,
+.title_inverted {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.title_inverted {
+  color: var(--white);
+}

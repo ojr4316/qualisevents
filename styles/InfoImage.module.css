@@ -1,0 +1,21 @@
+.info_image {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  margin: 64px 0;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+}
+
+.image_background {
+  width: 400px;
+  height: 400px;
+  background-color: var(--black);
+  position: relative;
+}
