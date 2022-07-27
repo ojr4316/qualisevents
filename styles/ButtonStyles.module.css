@@ -5,6 +5,33 @@
   padding: 8px 16px;
 }
 
+.normal:hover {
+  cursor: pointer;
+}
+
+.normal_text {
+  display: inline-block;
+  position: relative;
+}
+
+.normal_text::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.normal_text:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .inverted {
   background-color: transparent;
   border: 4px solid var(--white);

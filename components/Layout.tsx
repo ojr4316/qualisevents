@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "../styles/Layout.module.css";
-import logo from "../public/logo.png";
+import logo from "../public/logo2.png";
 import Head from "next/head";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,17 +27,45 @@ export default function Layout(props: Props) {
       <header className={styles.navbar}>
         <div className={styles.flex_third}>
           <Link href="/services">
-            <p className={styles.link} style={{ marginRight: "64px", borderBottom: props.page === "services" ? "2px solid black" : "none" }}>
+            <p
+              className={
+                props.page === "services" ? styles.link_active : styles.link
+              }
+              style={{
+                marginRight: "64px",
+                borderBottom:
+                  props.page === "services" ? "2px solid black" : "none",
+              }}
+            >
               Services
             </p>
           </Link>
           <Link href="/about">
-            <p className={styles.link} style={{ marginRight: "64px", borderBottom: props.page === "about" ? "2px solid black" : "none" }}>
+            <p
+              className={
+                props.page === "about" ? styles.link_active : styles.link
+              }
+              style={{
+                marginRight: "64px",
+                borderBottom:
+                  props.page === "about" ? "2px solid black" : "none",
+              }}
+            >
               About
             </p>
           </Link>
           <Link href="/portfolio">
-            <p className={styles.link} style={{borderBottom: props.page === "portfolio" ? "2px solid black" : "none"}}>Portfolio</p>
+            <p
+              className={
+                props.page === "portfolio" ? styles.link_active : styles.link
+              }
+              style={{
+                borderBottom:
+                  props.page === "portfolio" ? "2px solid black" : "none",
+              }}
+            >
+              Portfolio
+            </p>
           </Link>
         </div>
         <div className={styles.flex_third} style={{ justifyContent: "center" }}>
@@ -51,7 +79,17 @@ export default function Layout(props: Props) {
         >
           <Link href="/contact">
             <div className={styles.link_button}>
-              <p className={styles.link} style={{borderBottom: props.page === "contact" ? "2px solid black" : "none"}}>Contact</p>
+              <p
+                className={
+                  props.page === "contact" ? styles.link_active : styles.link
+                }
+                style={{
+                  borderBottom:
+                    props.page === "contact" ? "2px solid black" : "none",
+                }}
+              >
+                Contact
+              </p>
             </div>
           </Link>
         </div>

@@ -13,11 +13,17 @@ export default function Contact() {
       <div className={styles.contact}>
         <div className={styles.left}>
           <img src={welcome.src} alt="Welcome" className={styles.image} />
-          <h6 className={styles.header}>{"Let's make your dream come true..."}<br/>{"Contact us here!"}</h6> 
+          <h6 className={styles.header}>
+            {"Let's make your dream come true..."}
+            <br />
+            {"Contact us here!"}
+          </h6>
         </div>
         <div className={styles.contact_form}>
-
-          <div className={styles.form_container} style={{marginRight: "32px"}}>
+          <div
+            className={styles.form_container}
+            style={{ marginRight: "32px" }}
+          >
             <label className={styles.form_label}>First Name</label>
             <input type="text" className={styles.form_input} />
           </div>
@@ -25,7 +31,10 @@ export default function Contact() {
             <label className={styles.form_label}>Last Name</label>
             <input type="text" className={styles.form_input} />
           </div>
-          <div className={styles.form_container}  style={{marginRight: "32px"}}>
+          <div
+            className={styles.form_container}
+            style={{ marginRight: "32px" }}
+          >
             <label className={styles.form_label}>Phone</label>
             <input type="text" className={styles.form_input} />
           </div>
@@ -33,13 +42,20 @@ export default function Contact() {
             <label className={styles.form_label}>Email</label>
             <input type="text" className={styles.form_input} />
           </div>
-          <div className={styles.form_container} style={{gridColumn: "1 / 3 "}}>
+          <div
+            className={styles.form_container}
+            style={{ gridColumn: "1 / 3 " }}
+          >
             <label className={styles.form_label}>Inquiry</label>
             <textarea className={styles.form_textarea}></textarea>
           </div>
-          <button className={buttonStyles.normal} style={{marginTop: "24px", width: "220px"}}>Submit</button>
+          <button
+            className={buttonStyles.normal}
+            style={{ marginTop: "24px", width: "220px" }}
+          >
+            <p className={buttonStyles.normal_text}>Submit</p>
+          </button>
         </div>
-        
       </div>
     </Layout>
   );

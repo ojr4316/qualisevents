@@ -10,9 +10,10 @@
 }
 
 .header {
+    height: fit-content;
     position: absolute;
-    top: 55%;
-    left: 10%;
+    top: 35%;
+    left: 150px;
     width: 300px;
     color: var(--white);
     background-color: var(--black);
@@ -33,11 +34,11 @@
 .contact_form {
     margin-left: 600px;
     width: 100%;
-    height: calc(100vh - var(--header-height) - var(--footer-height) - 64px);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 0.5fr;
-    padding: 48px;
+    padding: 24px 48px;
 }
 
 .form_container {
@@ -52,7 +53,7 @@
 }
 
 .form_input {
-    font-size: 18px;
+    font-size: 24px;
     color: var(--black);
     border: 4px solid var(--black);
     padding: 16px;
@@ -60,7 +61,7 @@
 
 .form_textarea {
     resize: none;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--black);
     border: 4px solid var(--black);
     padding: 8px;
