@@ -14,12 +14,27 @@ type Props = {
 
 export default function InfoImage(props: Props) {
   return (
-    <div className={styles.info_image} style={{flexDirection: props.left ? "row-reverse" : "row"}}>
-      <div className={styles.side} style={{ marginRight: props.left ? "" : "64px", marginLeft: props.left ? "64px" : "0", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+    <div
+      className={styles.info_image}
+      style={{ flexDirection: props.left ? "row-reverse" : "row" }}
+    >
+      <div
+        className={styles.side}
+        style={{
+          marginRight: props.left ? "" : "64px",
+          marginLeft: props.left ? "64px" : "0",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <h4 className={textStyles.title}>{props.title}</h4>
         <p className={textStyles.info_text}>{props.text}</p>
-        <button className={buttonStyles.normal} onClick={() => props.buttonAction}>
-          {props.buttonText}
+        <button
+          className={buttonStyles.normal}
+          onClick={() => props.buttonAction}
+        >
+          <p className={buttonStyles.normal_text}>{props.buttonText}</p>
         </button>
       </div>
       <div className={styles.side}>

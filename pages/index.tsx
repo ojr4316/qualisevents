@@ -40,7 +40,9 @@ export default function Home() {
         <div className={styles.splash_text}>
           <h3 className={styles.stylized_header}>Have an idea?</h3>
           <h2 className={styles.main_header}>Let{"'"}s make it a reality.</h2>
-          <button className={styles.splash_button}>learn how</button>
+          <button className={styles.splash_button}>
+            <p className={styles.splash_button_text}>learn how</p>
+          </button>
         </div>
       </div>
       <div className={styles.info_images}>

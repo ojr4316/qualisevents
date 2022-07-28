@@ -42,6 +42,33 @@
   margin-top: 16px;
 }
 
+.splash_button:hover {
+  cursor: pointer;
+}
+
+.splash_button:hover > .splash_button_text::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.splash_button_text {
+  display: inline-block;
+  position: relative;
+}
+
+.splash_button_text::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
 .info_images,
 .testimonials {
   display: flex;

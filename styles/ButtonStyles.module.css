@@ -9,6 +9,11 @@
   cursor: pointer;
 }
 
+.normal:hover > .normal_text::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .normal_text {
   display: inline-block;
   position: relative;
@@ -25,11 +30,6 @@
   background-color: var(--white);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
-}
-
-.normal_text:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }
 
 .inverted {

@@ -76,6 +76,11 @@
   cursor: pointer;
 }
 
+.link_button:hover > .link::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .flex_third {
   display: flex;
   flex-direction: row;
@@ -113,6 +118,12 @@
 .footer_icon {
   width: 35px;
   height: 35px;
-  margin-right: 16px;
+  margin-right: 32px;
   color: var(--white);
+  transition: transform .25s ease-in-out;
+}
+
+.footer_icon:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
