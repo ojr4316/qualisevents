@@ -19,8 +19,8 @@
 }
 
 .stylized_header {
-  /* Add font */
-  font-size: 48px;
+  font-family: "Imogen Agnes";
+  font-size: 80px;
   font-weight: normal;
   color: var(--white);
 }

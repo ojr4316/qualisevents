@@ -101,10 +101,31 @@ export default function Layout(props: Props) {
           <p className={styles.footer_text}>info@qualisevents.com</p>
         </div>
         <div className={styles.flex_third} style={{ justifyContent: "center" }}>
-          <FontAwesomeIcon icon={faInstagram} className={styles.footer_icon} />
-          <FontAwesomeIcon icon={faFacebookF} className={styles.footer_icon} />
-          <FontAwesomeIcon icon={faEtsy} className={styles.footer_icon} />
-          <FontAwesomeIcon icon={faPinterestP} className={styles.footer_icon} />
+          <a
+            target="_blank"
+            href="https://www.instagram.com/qualisevents/"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className={styles.footer_icon}
+            />
+          </a>
+          <a target="_self" href="#!" rel="noopener noreferrer">
+            <FontAwesomeIcon
+              icon={faFacebookF}
+              className={styles.footer_icon}
+            />
+          </a>
+          <a target="_self" href="#!" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faEtsy} className={styles.footer_icon} />
+          </a>
+          <a target="_self" href="#!" rel="noopener noreferrer">
+            <FontAwesomeIcon
+              icon={faPinterestP}
+              className={styles.footer_icon}
+            />
+          </a>
         </div>
         <div className={styles.flex_third} />
       </footer>
