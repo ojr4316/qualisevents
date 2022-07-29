@@ -2,6 +2,7 @@
 import styles from "../styles/InfoImage.module.css";
 import textStyles from "../styles/TextStyles.module.css";
 import buttonStyles from "../styles/ButtonStyles.module.css";
+import { motion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -10,6 +11,14 @@ type Props = {
   buttonAction: Function;
   left: boolean;
   image: string;
+  animation?: number;
+};
+
+const variants = {
+  anim1_text: { opacity: 0, x: -50 },
+  anim1_img: { opacity: 0, x: 50 },
+  anim2_text: { opacity: 0, x: 50 },
+  anim2_img: { opacity: 0, x: -50 },
 };
 
 export default function InfoImage(props: Props) {
@@ -18,7 +27,7 @@ export default function InfoImage(props: Props) {
       className={styles.info_image}
       style={{ flexDirection: props.left ? "row-reverse" : "row" }}
     >
-      <div
+      <motion.div
         className={styles.side}
         style={{
           marginRight: props.left ? "" : "64px",
@@ -27,6 +36,12 @@ export default function InfoImage(props: Props) {
           flexDirection: "column",
           justifyContent: "center",
         }}
+        initial={
+          props.animation == 1 ? variants.anim1_text : variants.anim2_text
+        }
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, type: "tween" }}
       >
         <h4 className={textStyles.title}>{props.title}</h4>
         <p className={textStyles.info_text}>{props.text}</p>
@@ -36,12 +51,18 @@ export default function InfoImage(props: Props) {
         >
           <p className={buttonStyles.normal_text}>{props.buttonText}</p>
         </button>
-      </div>
-      <div className={styles.side}>
+      </motion.div>
+      <motion.div
+        className={styles.side}
+        initial={props.animation == 1 ? variants.anim1_img : variants.anim2_img}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, type: "tween" }}
+      >
         <div className={styles.image_background}>
           <img src={props.image} alt="" className={styles.image} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

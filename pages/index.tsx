@@ -9,6 +9,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -55,6 +56,7 @@ export default function Home() {
           buttonAction={() => {}}
           buttonText={"My Etsy Shop"}
           image={etsy_shop.src}
+          animation={1}
         />
         <InfoImage
           left={true}
@@ -65,6 +67,7 @@ export default function Home() {
           buttonAction={() => {}}
           buttonText={"My Etsy Shop"}
           image={etsy_shop.src}
+          animation={2}
         />
         <InfoImage
           left={false}
@@ -75,14 +78,21 @@ export default function Home() {
           buttonAction={() => {}}
           buttonText={"My Etsy Shop"}
           image={etsy_shop.src}
+          animation={1}
         />
       </div>
       <div className={styles.testimonials}>
         <h2 className={TextStyles.title}>
           Some of our client&apos;s testimonials
         </h2>
-        <div className={styles.testimonial_container}>
-          <div className={styles.testimonial}>
+        <motion.div className={styles.testimonial_container}>
+          <motion.div
+            className={styles.testimonial}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             <p className={styles.testimonial_title}>
               &quot;Best Formal Event EVER!!&quot;
             </p>
@@ -112,8 +122,14 @@ export default function Home() {
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
             <p className={styles.testimonial_date}>- 7/6/2022</p>
-          </div>
-          <div className={styles.testimonial}>
+          </motion.div>
+          <motion.div
+            className={styles.testimonial}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            viewport={{ once: true }}
+          >
             <p className={styles.testimonial_title}>
               &quot;Best Formal Event EVER!!&quot;
             </p>
@@ -143,8 +159,14 @@ export default function Home() {
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
             <p className={styles.testimonial_date}>- 7/6/2022</p>
-          </div>
-          <div className={styles.testimonial}>
+          </motion.div>
+          <motion.div
+            className={styles.testimonial}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            viewport={{ once: true }}
+          >
             <p className={styles.testimonial_title}>
               &quot;Best Formal Event EVER!!&quot;
             </p>
@@ -174,8 +196,8 @@ export default function Home() {
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
             <p className={styles.testimonial_date}>- 7/6/2022</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </Layout>
   );
