@@ -5,8 +5,7 @@
 }
 
 .image {
-  padding: 10% 15%;
-  width: 100%;
+  width: 300px;
   height: 300px;
   object-fit: cover;
   pointer-events: none;
@@ -14,5 +13,67 @@
 }
 
 .carousel_container {
+  width: 85%;
+  margin: 64px 0;
+}
+
+.instagram_carousel_container {
+  width: 85%;
+  margin: 32px 0 32px 0;;
+}
+
+.item_class {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  font-size: 36px;
+  margin-bottom: 32px;
+  color: white;
+  background-color: black;
+  padding: 16px 0;
+  text-decoration: none;
+}
+
+.instagram_button:hover {
+  cursor: pointer;
+}
+
+.instagram_button:hover > .instagram_text::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.instagram_text {
+  display: inline-block;
+  position: relative;
+}
+
+.instagram_text::after {
+  content: '';
+  position: absolute;
   width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.instagram_icon {
+  width: 50px;
+  margin: 0 16px 0 0;
+}
+
+.separator {
+  margin: 16px 0;
+  width: 80%;
+  border: 1px solid var(--gray1);
 }
