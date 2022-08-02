@@ -7,6 +7,9 @@ import etsy_shop from "../public/etsy_shop.png";
 import grad_party from "../public/grad_party.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -17,7 +20,7 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 4,
-    slidesToSlide: 2,
+    slidesToSlide: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -30,6 +33,20 @@ const responsive = {
 };
 
 export default function Portfolio() {
+  const carousel_image = <div draggable={false}>
+    <img src={grad_party.src}
+      alt="Grad Party"
+      className={styles.image}
+      draggable={false}/>             
+  </div>
+  ;
+
+  let carousel_array = [];
+
+  for(let i=0;i<8;i++){
+    carousel_array.push(carousel_image);
+  }
+
   return (
     <Layout page="portfolio">
       <div className={styles.portfolio}>
@@ -44,61 +61,50 @@ export default function Portfolio() {
           image={etsy_shop.src}
           animation={1}
         />
+        <hr className={styles.separator}/>
+        <h4 className={textStyles.title} style={{ marginTop: "32px" }}>
+          Featured Handcrafted Goods
+        </h4>
         <Carousel
           responsive={responsive}
           containerClass={styles.carousel_container}
+          itemClass={styles.item_class}
           renderArrowsWhenDisabled={true}
-          showDots={true}
+          showDots={false}
         >
-          <div draggable={false}>
-            <img
-              src={grad_party.src}
-              alt="Grad Party"
-              className={styles.image}
-              draggable={false}
-            />
-          </div>
-          <div draggable={false}>
-            <img
-              src={grad_party.src}
-              alt="Grad Party"
-              className={styles.image}
-              draggable={false}
-            />
-          </div>
-          <div draggable={false}>
-            <img
-              src={grad_party.src}
-              alt="Grad Party"
-              className={styles.image}
-              draggable={false}
-            />
-          </div>
-          <div draggable={false}>
-            <img
-              src={grad_party.src}
-              alt="Grad Party"
-              className={styles.image}
-              draggable={false}
-            />
-          </div>
-          <div draggable={false}>
-            <img
-              src={grad_party.src}
-              alt="Grad Party"
-              className={styles.image}
-              draggable={false}
-            />
-          </div>
-          <div draggable={false}>
-            <img
-              src={grad_party.src}
-              alt="Grad Party"
-              className={styles.image}
-              draggable={false}
-            />
-          </div>
+          {carousel_array}
         </Carousel>
+        <h4 className={textStyles.title} style={{ marginTop: "32px" }}>
+          Featured Decor
+        </h4>
+        <Carousel
+          responsive={responsive}
+          containerClass={styles.carousel_container}
+          itemClass={styles.item_class}
+          renderArrowsWhenDisabled={true}
+          showDots={false}
+        >
+          {carousel_array}
+        </Carousel>
+        <hr className={styles.separator}/>
+        <h4 className={textStyles.title} style={{ marginTop: "32px" }}>
+          Featured Posts
+        </h4>
+        <Carousel
+          responsive={responsive}
+          containerClass={styles.instagram_carousel_container}
+          itemClass={styles.item_class}
+          renderArrowsWhenDisabled={true}
+          showDots={false}
+        >
+          {carousel_array}
+        </Carousel>
+        <Link href="https://instagram.com/qualisevents">
+          <div className={styles.instagram_button}>
+            <FontAwesomeIcon icon={faInstagram} className={styles.instagram_icon}/>
+            <p className={styles.instagram_text}>See More on Instagram!</p>
+          </div>
+        </Link>
       </div>
     </Layout>
   );
