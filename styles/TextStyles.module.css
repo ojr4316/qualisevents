@@ -23,3 +23,15 @@
 .title_inverted {
   color: var(--white);
 }
+
+
+@media only screen and (max-width: 800px) {
+  .title, .title_inverted {
+    font-size: 32px;
+  }
+
+  .info_text, .info_text_inverted {
+    font-size: 14px;
+  }
+
+}

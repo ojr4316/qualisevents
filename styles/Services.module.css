@@ -33,3 +33,16 @@
   width: 80%;
   padding: 32px;
 }
+
+@media only screen and (max-width: 800px) { 
+  .service_list {
+    min-height: 800px;
+    flex-direction: column;
+  }
+  
+  .service {
+    flex: 1 0 0;
+    position: relative;
+  }
+
+}

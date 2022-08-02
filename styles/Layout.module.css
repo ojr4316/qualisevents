@@ -74,6 +74,7 @@
   padding: 8px 32px;
   border: 4px solid var(--gray4);
   cursor: pointer;
+  text-align: center;
 }
 
 .link_button:hover > .link::after {
@@ -126,4 +127,40 @@
 .footer_icon:hover {
   transform: scale(1.5);
   cursor: pointer;
+}
+
+.menu {
+  color: var(--black);
+  width: 40px;
+}
+
+.nav_items {
+  position: absolute;
+  top: var(--header-height);
+  right: 0;
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    padding: 8px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer {
+    height: calc(var(--footer-height) * 1.5);
+  }
+  .link_button {
+    border: 4px solid var(--white);
+  }
+  .link, .link_active {
+    color: var(--white);
+    text-align: center;
+  }
 }

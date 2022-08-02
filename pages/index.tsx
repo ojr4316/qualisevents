@@ -21,6 +21,7 @@ export default function Home() {
           showThumbs={false}
           showStatus={false}
           width="100%"
+          dynamicHeight={false}
         >
           <div>
             <img
@@ -127,7 +128,7 @@ export default function Home() {
             className={styles.testimonial}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
           >
             <p className={styles.testimonial_title}>
@@ -164,7 +165,7 @@ export default function Home() {
             className={styles.testimonial}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 0.4, duration: 1 }}
             viewport={{ once: true }}
           >
             <p className={styles.testimonial_title}>

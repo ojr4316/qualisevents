@@ -39,3 +39,11 @@
   font-size: 24px;
   padding: 16px 32px;
 }
+
+@media only screen and (max-width: 800px) { 
+  .normal, .inverted {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+}

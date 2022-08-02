@@ -24,14 +24,11 @@ const variants = {
 export default function InfoImage(props: Props) {
   return (
     <div
-      className={styles.info_image}
-      style={{ flexDirection: props.left ? "row-reverse" : "row" }}
+      className={`${props.left ? styles.info_image : styles.info_image_flip}`}
     >
       <motion.div
-        className={styles.side}
+        className={`${styles.side} ${props.left ? styles.side_left : styles.side_right}`}
         style={{
-          marginRight: props.left ? "" : "64px",
-          marginLeft: props.left ? "64px" : "0",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
