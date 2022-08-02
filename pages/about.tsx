@@ -8,7 +8,9 @@ export default function About() {
   return (
     <Layout page="about">
       <div className={styles.about}>
-        <h4 className={textStyles.title} style={{marginTop: "32px"}}>A Little About Us</h4>
+        <h4 className={textStyles.title} style={{ marginTop: "32px" }}>
+          A Little About Us
+        </h4>
         <InfoImage
           left={false}
           title={"Products your events need"}
@@ -18,6 +20,7 @@ export default function About() {
           buttonAction={() => {}}
           buttonText={"My Etsy Shop"}
           image={etsy_shop.src}
+          animation={1}
         />
         <InfoImage
           left={true}
@@ -28,6 +31,7 @@ export default function About() {
           buttonAction={() => {}}
           buttonText={"My Etsy Shop"}
           image={etsy_shop.src}
+          animation={2}
         />
       </div>
     </Layout>

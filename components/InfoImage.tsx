@@ -41,7 +41,7 @@ export default function InfoImage(props: Props) {
         }
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.5, type: "tween" }}
+        transition={{ duration: 1, type: "tween" }}
       >
         <h4 className={textStyles.title}>{props.title}</h4>
         <p className={textStyles.info_text}>{props.text}</p>
@@ -57,7 +57,7 @@ export default function InfoImage(props: Props) {
         initial={props.animation == 1 ? variants.anim1_img : variants.anim2_img}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.5, type: "tween" }}
+        transition={{ duration: 1, type: "tween" }}
       >
         <div className={styles.image_background}>
           <img src={props.image} alt="" className={styles.image} />

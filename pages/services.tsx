@@ -40,6 +40,7 @@ export default function Services() {
           buttonAction={() => {}}
           buttonText={"My Etsy Shop"}
           image={etsy_shop.src}
+          animation={1}
         />
 
         <div className={styles.service_list}>
