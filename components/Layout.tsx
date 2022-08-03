@@ -10,7 +10,7 @@ import {
   faInstagram,
   faPinterestP,
 } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
@@ -168,18 +168,6 @@ export default function Layout(props: Props) {
         </header>
       );
     }
-
-    const handleScroll = () => {
-      setOpen(false)
-      alert("This should work")
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-
   }, [open, props.page]);
 
   return (
