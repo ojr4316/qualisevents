@@ -136,7 +136,7 @@
   }
   .home_splash {
     flex-direction: column;
-    height: calc(100% - var(--header-height));
+    height: 100%;
   }
   .testimonial {
     width: 100%;

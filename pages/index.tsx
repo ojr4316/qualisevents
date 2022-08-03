@@ -10,11 +10,24 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import isMobile from "is-mobile";
 
 export default function Home() {
+  useEffect(() => {
+    if(isMobile()){
+      const height = window.innerHeight - 120;
+      let element = document.getElementById("home-splash");
+      if(element != null){
+        element.style.height = `${height}px`;
+        console.log(`${height} Working`)
+      }
+    }
+  }, []); 
+
   return (
     <Layout>
-      <div className={styles.home_splash}>
+      <div className={styles.home_splash} id="home-splash">
         <Carousel
           autoPlay={true}
           infiniteLoop={true}
