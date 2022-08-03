@@ -144,6 +144,8 @@
   flex-direction: column;
   z-index: 1;
   padding: 16px;
+  transition: .3s;
+  transform-origin: top;
 }
 
 @media only screen and (max-width: 800px) {

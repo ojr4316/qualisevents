@@ -108,7 +108,7 @@ export default function Layout(props: Props) {
             className={styles.nav_items}
             initial={{ scaleY: "0"}}
             animate={{ scaleY: open ? "1" : "0" }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
+            transition={{ duration: 1 }}
           >
             <Link href="/services">
               <p
@@ -168,6 +168,18 @@ export default function Layout(props: Props) {
         </header>
       );
     }
+
+    const handleScroll = () => {
+      setOpen(false)
+      alert("This should work")
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
   }, [open, props.page]);
 
   return (
