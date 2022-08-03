@@ -13,6 +13,7 @@ import {
 import { useCallback, useEffect, useState } from "react";
 import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import isMobile from "is-mobile";
 
 const mobile = require("is-mobile");
 
@@ -211,7 +212,7 @@ export default function Layout(props: Props) {
             />
           </a>
         </div>
-        <div className={styles.flex_third} />
+        <div className={isMobile() ? styles.flex_third : ""} />
       </footer>
     </div>
   );
