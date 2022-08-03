@@ -2,6 +2,7 @@
 @font-face {
   font-family: "Imogen Agnes"; /*a name to be used later*/
   src: url("../fonts/imogen-agnes.ttf"); /*URL to font*/
+  font-display: fallback;
 }
 
 :root {
