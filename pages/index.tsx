@@ -91,112 +91,56 @@ export default function Home() {
             className={styles.testimonial}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             <p className={styles.testimonial_title}>
               &quot;Best Formal Event EVER!!&quot;
             </p>
-            <div className={styles.stars_container}>
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon icon={faStar} className={styles.rating} />
-            </div>
             <p className={styles.testimonial_desc}>
               {
                 '"It was the most well-planned, easy to execute part planning experience I\'ve ever had!"'
               }
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
-            <p className={styles.testimonial_date}>- 7/6/2022</p>
+            <p className={styles.testimonial_date}> {new Date("7/6/2022").toLocaleDateString("en-US", {month: "long", year: "numeric"})}</p>
           </motion.div>
           <motion.div
             className={styles.testimonial}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
           >
             <p className={styles.testimonial_title}>
               &quot;Best Formal Event EVER!!&quot;
             </p>
-            <div className={styles.stars_container}>
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon icon={faStar} className={styles.rating} />
-            </div>
             <p className={styles.testimonial_desc}>
               {
                 '"It was the most well-planned, easy to execute part planning experience I\'ve ever had!"'
               }
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
-            <p className={styles.testimonial_date}>- 7/6/2022</p>
+            <p className={styles.testimonial_date}>{new Date("3/14/2022").toLocaleDateString("en-US", {month: "long", year: "numeric"})}</p>
           </motion.div>
           <motion.div
             className={styles.testimonial}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: true }}
           >
             <p className={styles.testimonial_title}>
               &quot;Best Formal Event EVER!!&quot;
             </p>
-            <div className={styles.stars_container}>
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon
-                icon={faStar}
-                className={styles.rating_checked}
-              />
-              <FontAwesomeIcon icon={faStar} className={styles.rating} />
-            </div>
+
             <p className={styles.testimonial_desc}>
               {
                 '"It was the most well-planned, easy to execute part planning experience I\'ve ever had!"'
               }
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
-            <p className={styles.testimonial_date}>- 7/6/2022</p>
+            <p className={styles.testimonial_date}>{new Date("5/16/2021").toLocaleDateString("en-US", {month: "long", year: "numeric"})}</p>
           </motion.div>
         </motion.div>
       </div>

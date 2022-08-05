@@ -78,7 +78,7 @@
 
 .testimonial {
   text-align: center;
-  padding: 4px 8px;
+  padding: 16px;
   border: 2px solid black;
   width: 350px;
   display: flex;
@@ -88,24 +88,27 @@
 }
 .testimonial_title {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--black);
 }
 .stars_container {
-  margin: 12px 0;
+  margin: 8px 0;
 }
 .testimonial_desc {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--black);
+  font-weight: normal;
 }
 .testimonial_name {
-  margin-top: 12px;
+  margin-top: 16px;
   font-size: 24px;
   color: var(--black);
+  font-weight: 300;
 }
 .testimonial_date {
   font-size: 16px;
   color: var(--gray2);
+  font-weight: 700;
 }
 .rating {
   width: 30px;

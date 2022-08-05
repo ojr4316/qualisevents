@@ -18,7 +18,7 @@
 .logo {
   width: 200px;
   cursor: pointer;
-  transition: transform .25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
   transform-origin: center;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -94,6 +94,12 @@
   flex: 1 0 0;
 }
 
+.flex_third_empty {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 0;
+}
+
 .footer {
   background-color: var(--black);
   height: var(--footer-height);
@@ -119,9 +125,9 @@
 .footer_icon {
   width: 35px;
   height: 35px;
-  margin-right: 32px;
+  margin: 0 8px;
   color: var(--white);
-  transition: transform .25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .footer_icon:hover {
@@ -153,14 +159,18 @@
   .footer {
     flex-direction: column;
   }
-  .footer {
-    height: calc(var(--footer-height) * 1.5);
-  }
   .link_button {
     border: 4px solid var(--white);
   }
-  .link, .link_active {
+  .link,
+  .link_active {
     color: var(--white);
+    text-align: center;
+  }
+  .flex_third_empty {
+    flex: 0 0 0;
+  }
+  .footer_name, .footer_text {
     text-align: center;
   }
 }

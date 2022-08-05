@@ -8,6 +8,8 @@ import Layout from "../components/Layout";
 import welcome from "../public/welcome.png";
 import { useState } from "react";
 
+const mobile = require("is-mobile");
+
 export default function Contact() {
 
   const[firstName, setFirstName] = useState("");
@@ -24,7 +26,6 @@ export default function Contact() {
     <Layout page="contact">
       <div className={styles.contact}>
         <div className={styles.left}>
-          <img src={welcome.src} alt="Welcome" className={styles.image} />
           <h6 className={styles.header}>
             {"Let's make your dream come true..."}
             <br />
@@ -34,29 +35,29 @@ export default function Contact() {
         <div className={styles.contact_form}>
           <div
             className={styles.form_container}
-            style={{ marginRight: "32px" }}
+            style={{ marginRight: mobile() ? "0" : "32px" }}
           >
             <label className={styles.form_label}>First Name</label>
             <input type="text" className={styles.form_input} value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
           </div>
-          <div className={styles.form_container}>
+          <div className={styles.form_container} style={{gridColumn: mobile() ? "1" : "2"}}>
             <label className={styles.form_label}>Last Name</label>
             <input type="text" className={styles.form_input} value={lastName} onChange={(e) => setLastName(e.target.value)}/>
           </div>
           <div
             className={styles.form_container}
-            style={{ marginRight: "32px" }}
+            style={{ marginRight: mobile() ? "0" : "32px" }}
           >
             <label className={styles.form_label}>Phone</label>
-            <input type="text" className={styles.form_input} value={phone} onChange={(e) => setPhone(e.target.value)}/>
+            <input type="tel" className={styles.form_input} value={phone} onChange={(e) => setPhone(e.target.value)}/>
           </div>
-          <div className={styles.form_container}>
+          <div className={styles.form_container} style={{gridColumn: mobile() ? "1" : "2"}}>
             <label className={styles.form_label}>Email</label>
-            <input type="text" className={styles.form_input} value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input type="email" className={styles.form_input} value={email} onChange={(e) => setEmail(e.target.value)}/>
           </div>
           <div
             className={styles.form_container}
-            style={{ gridColumn: "1 / 3 " }}
+            style={{ gridColumn: mobile() ? "1" : "1/3"}}
           >
             <label className={styles.form_label}>Inquiry</label>
             <textarea className={styles.form_textarea} value={inquiry} onChange={(e)=>setInquiry(e.target.value)}></textarea>
