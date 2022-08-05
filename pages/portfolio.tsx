@@ -18,8 +18,13 @@ const responsive = {
     items: 5,
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1700 },
     items: 4,
+    slidesToSlide: 4,
+  },
+  desktop_sm: {
+    breakpoint: { max: 1700, min: 1024 },
+    items: 3,
     slidesToSlide: 4,
   },
   tablet: {
@@ -33,35 +38,39 @@ const responsive = {
 };
 
 export default function Portfolio() {
-  const carousel_image = <div draggable={false}>
-    <img src={grad_party.src}
-      alt="Grad Party"
-      className={styles.image}
-      draggable={false}/>             
-  </div>
-  ;
-
+  const carousel_image = (
+    <div draggable={false}>
+      <img
+        src={grad_party.src}
+        alt="Grad Party"
+        className={styles.image}
+        draggable={false}
+      />
+    </div>
+  );
   let carousel_array = [];
 
-  for(let i=0;i<8;i++){
+  for (let i = 0; i < 8; i++) {
     carousel_array.push(carousel_image);
   }
 
   return (
     <Layout page="portfolio">
       <div className={styles.portfolio}>
-        <InfoImage
-          left={true}
-          title={"Products your events need"}
-          text={
-            "Custom products handcrafted for your perfect events. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet leo quis nisl congue fermentum. In feugiat justo sagittis, ornare enim sed, convallis justo. Cras sollicitudin hendrerit eleifend. Ut id enim non justo dignissim pharetra quis vel neque. Etiam maximus orci non tellus elementum, at faucibus urna suscipit. Sed faucibus in neque vitae tincidunt. Nam posuere nibh augue, a ultrices nibh tempor vel. Nulla facilisi."
-          }
-          buttonAction={() => {}}
-          buttonText={"My Etsy Shop"}
-          image={etsy_shop.src}
-          animation={1}
-        />
-        <hr className={styles.separator}/>
+        <div style={{ padding: "16px" }}>
+          <InfoImage
+            left={true}
+            title={"Products your events need"}
+            text={
+              "Custom products handcrafted for your perfect events. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet leo quis nisl congue fermentum. In feugiat justo sagittis, ornare enim sed, convallis justo. Cras sollicitudin hendrerit eleifend. Ut id enim non justo dignissim pharetra quis vel neque. Etiam maximus orci non tellus elementum, at faucibus urna suscipit. Sed faucibus in neque vitae tincidunt. Nam posuere nibh augue, a ultrices nibh tempor vel. Nulla facilisi."
+            }
+            buttonAction={() => {}}
+            buttonText={"My Etsy Shop"}
+            image={etsy_shop.src}
+            animation={1}
+          />
+        </div>
+        <hr className={styles.separator} />
         <h4 className={textStyles.title} style={{ marginTop: "32px" }}>
           Featured Handcrafted Goods
         </h4>
@@ -86,7 +95,7 @@ export default function Portfolio() {
         >
           {carousel_array}
         </Carousel>
-        <hr className={styles.separator}/>
+        <hr className={styles.separator} />
         <h4 className={textStyles.title} style={{ marginTop: "32px" }}>
           Featured Posts
         </h4>
@@ -101,7 +110,10 @@ export default function Portfolio() {
         </Carousel>
         <Link href="https://instagram.com/qualisevents">
           <div className={styles.instagram_button}>
-            <FontAwesomeIcon icon={faInstagram} className={styles.instagram_icon}/>
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className={styles.instagram_icon}
+            />
             <p className={styles.instagram_text}>See More on Instagram!</p>
           </div>
         </Link>

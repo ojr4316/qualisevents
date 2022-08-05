@@ -15,15 +15,14 @@ import isMobile from "is-mobile";
 
 export default function Home() {
   useEffect(() => {
-    if(isMobile()){
+    if (isMobile()) {
       const height = window.innerHeight - 120;
       let element = document.getElementById("home-splash");
-      if(element != null){
+      if (element != null) {
         element.style.height = `${height}px`;
-        console.log(`${height} Working`)
       }
     }
-  }, []); 
+  }, []);
 
   return (
     <Layout>

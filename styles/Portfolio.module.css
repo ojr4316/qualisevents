@@ -19,7 +19,7 @@
 
 .instagram_carousel_container {
   width: 85%;
-  margin: 32px 0 32px 0;;
+  margin: 32px 0 32px 0;
 }
 
 .item_class {
@@ -55,7 +55,7 @@
 }
 
 .instagram_text::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -76,4 +76,29 @@
   margin: 16px 0;
   width: 80%;
   border: 1px solid var(--gray1);
+}
+
+/* Medium devices */
+@media only screen and (max-width: 992px) {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .instagram_button {
+    width: 80%;
+    font-size: 24px;
+  }
+  .instagram_icon {
+    width: 40px;
+  }
 }

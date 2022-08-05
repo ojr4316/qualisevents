@@ -94,7 +94,7 @@ export default function Layout(props: Props) {
   );
 
   useEffect(() => {
-    if (mobile()) {
+    if (mobile() || window.innerWidth < 800) {
       setNav(
         <header className={styles.navbar}>
           <Link href="/">
@@ -107,7 +107,7 @@ export default function Layout(props: Props) {
           />
           <motion.div
             className={styles.nav_items}
-            initial={{ scaleY: "0"}}
+            initial={{ scaleY: "0" }}
             animate={{ scaleY: open ? "1" : "0" }}
             transition={{ duration: 1 }}
           >
@@ -212,7 +212,10 @@ export default function Layout(props: Props) {
             />
           </a>
         </div>
-        <div className={isMobile() ? styles.flex_third : ""} />
+        <div
+          className={styles.flex_third}
+          style={isMobile() ? { display: "none" } : {}}
+        />
       </footer>
     </div>
   );
