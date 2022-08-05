@@ -18,7 +18,7 @@
 }
 
 .stylized_header {
-  font-family: "Imogen Agnes";
+  font-family: "Imogen Agnes", 'La Belle Aurore', cursive;
   font-size: 80px;
   font-weight: normal;
   color: var(--white);
