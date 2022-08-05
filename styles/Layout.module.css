@@ -8,6 +8,7 @@
 .navbar {
   background-color: white;
   height: var(--header-height);
+  padding: 16px 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -177,7 +178,8 @@
   .flex_third_empty {
     flex: 0 0 0;
   }
-  .footer_name, .footer_text {
+  .footer_name,
+  .footer_text {
     text-align: center;
   }
 }
