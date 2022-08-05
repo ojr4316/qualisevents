@@ -10,9 +10,10 @@ import {
   faInstagram,
   faPinterestP,
 } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useCallback, useEffect, useState } from "react";
+import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import isMobile from "is-mobile";
 
 const mobile = require("is-mobile");
 
@@ -93,7 +94,7 @@ export default function Layout(props: Props) {
   );
 
   useEffect(() => {
-    if (mobile()) {
+    if (mobile() || window.innerWidth < 800) {
       setNav(
         <header className={styles.navbar}>
           <Link href="/">

@@ -139,6 +139,7 @@
   }
   .home_splash {
     flex-direction: column;
+    height: 100%;
   }
   .testimonial {
     width: 100%;
@@ -153,5 +154,8 @@
   }
   .splash_button {
     font-size: 24px;
+  }
+  .splash_text {
+    padding: 16px 32px 32px 32px;
   }
 }

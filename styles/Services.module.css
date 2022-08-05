@@ -34,15 +34,18 @@
   padding: 32px;
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 800px) {
   .service_list {
     height: 1000px;
     flex-direction: column;
   }
-  
+
   .service {
     flex: 1 0 0;
     position: relative;
   }
 
+  .service_info {
+    width: 100%;
+  }
 }

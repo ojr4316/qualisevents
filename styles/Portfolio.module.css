@@ -20,7 +20,7 @@
 
 .instagram_carousel_container {
   width: 85%;
-  margin: 32px 0 32px 0;;
+  margin: 32px 0 32px 0;
 }
 
 .item_class {
@@ -56,7 +56,7 @@
 }
 
 .instagram_text::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);

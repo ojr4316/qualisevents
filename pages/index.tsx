@@ -10,11 +10,23 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import isMobile from "is-mobile";
 
 export default function Home() {
+  useEffect(() => {
+    if (isMobile()) {
+      const height = window.innerHeight - 120;
+      let element = document.getElementById("home-splash");
+      if (element != null) {
+        element.style.height = `${height}px`;
+      }
+    }
+  }, []);
+
   return (
     <Layout>
-      <div className={styles.home_splash}>
+      <div className={styles.home_splash} id="home-splash">
         <Carousel
           autoPlay={true}
           infiniteLoop={true}
@@ -49,7 +61,7 @@ export default function Home() {
       </div>
       <div className={styles.info_images}>
         <InfoImage
-          left={false}
+          left={true}
           title={"Products your events need"}
           text={
             "Custom products handcrafted for your perfect events. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet leo quis nisl congue fermentum. In feugiat justo sagittis, ornare enim sed, convallis justo. Cras sollicitudin hendrerit eleifend. Ut id enim non justo dignissim pharetra quis vel neque. Etiam maximus orci non tellus elementum, at faucibus urna suscipit. Sed faucibus in neque vitae tincidunt. Nam posuere nibh augue, a ultrices nibh tempor vel. Nulla facilisi."
@@ -60,7 +72,7 @@ export default function Home() {
           animation={1}
         />
         <InfoImage
-          left={true}
+          left={false}
           title={"Products your events need"}
           text={
             "Custom products handcrafted for your perfect events. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet leo quis nisl congue fermentum. In feugiat justo sagittis, ornare enim sed, convallis justo. Cras sollicitudin hendrerit eleifend. Ut id enim non justo dignissim pharetra quis vel neque. Etiam maximus orci non tellus elementum, at faucibus urna suscipit. Sed faucibus in neque vitae tincidunt. Nam posuere nibh augue, a ultrices nibh tempor vel. Nulla facilisi."
@@ -71,7 +83,7 @@ export default function Home() {
           animation={2}
         />
         <InfoImage
-          left={false}
+          left={true}
           title={"Products your events need"}
           text={
             "Custom products handcrafted for your perfect events. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet leo quis nisl congue fermentum. In feugiat justo sagittis, ornare enim sed, convallis justo. Cras sollicitudin hendrerit eleifend. Ut id enim non justo dignissim pharetra quis vel neque. Etiam maximus orci non tellus elementum, at faucibus urna suscipit. Sed faucibus in neque vitae tincidunt. Nam posuere nibh augue, a ultrices nibh tempor vel. Nulla facilisi."
