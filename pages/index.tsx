@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import grad_party from "../public/grad_party.png";
 import InfoImage from "../components/InfoImage";
 import etsy_shop from "../public/etsy_shop.png";
-import john from "../public/johnpicture.jpg";
+import john from "../public/johnpicture.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
