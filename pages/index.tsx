@@ -109,7 +109,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <Image
+            <img
               src={john.src}
               alt="John"
               className={styles.testimonial_image}
@@ -139,7 +139,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <Image
+            <img
               src={john.src}
               alt="John"
               className={styles.testimonial_image}
@@ -168,7 +168,7 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <Image
+            <img
               src={john.src}
               alt="John"
               className={styles.testimonial_image}
