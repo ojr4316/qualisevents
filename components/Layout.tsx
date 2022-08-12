@@ -108,7 +108,7 @@ export default function Layout(props: Props) {
           <motion.div
             className={styles.nav_items}
             initial={{ opacity: 0 }}
-            animate={{ opacity: open ? 1 : 0 }}
+            animate={{ opacity: open ? 1 : 0, scaleY: open ? 1 : 0 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
           >
             <Link href="/services">

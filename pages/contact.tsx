@@ -32,10 +32,10 @@ export default function Contact() {
             {"Contact us here!"}
           </h6>
         </div>
-        <div className={styles.contact_form}>
+        <div className={styles.contact_form} style={mobile() ? {gridTemplateColumns: ''} : {}}>
           <div
             className={styles.form_container}
-            style={{ marginRight: mobile() ? "0" : "32px" }}
+            style={mobile() ? {marginRight: "0"} : { marginRight: "32px" }}
           >
             <label className={styles.form_label}>First Name</label>
             <input type="text" className={styles.form_input} value={firstName} onChange={(e) => setFirstName(e.target.value)}/>

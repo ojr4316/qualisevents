@@ -5,13 +5,16 @@ import styles from "../styles/Home.module.css";
 import grad_party from "../public/grad_party.png";
 import InfoImage from "../components/InfoImage";
 import etsy_shop from "../public/etsy_shop.png";
+import john from "../public/johnpicture.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import isMobile from "is-mobile";
+import Image from "next/image";
+import idea from "../public/idea.png";
 
 export default function Home() {
   useEffect(() => {
@@ -52,10 +55,10 @@ export default function Home() {
         </Carousel>
 
         <div className={styles.splash_text}>
-          <h3 className={styles.stylized_header}>Have an idea?</h3>
+          <img className={styles.stylized_header} src={idea.src} alt="Have an idea?"/>
           <h2 className={styles.main_header}>Let{"'"}s make it a reality.</h2>
           <button className={styles.splash_button}>
-            <p className={styles.splash_button_text}>learn how</p>
+            <p className={styles.splash_button_text}>get in contact</p>
           </button>
         </div>
       </div>
@@ -106,16 +109,28 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className={styles.testimonial_title}>
-              &quot;Best Formal Event EVER!!&quot;
-            </p>
+            <img
+              src={john.src}
+              alt="John"
+              className={styles.testimonial_image}
+            />
+            <FontAwesomeIcon
+              icon={faQuoteLeft}
+              className={styles.testimonial_quote}
+            />
             <p className={styles.testimonial_desc}>
               {
-                '"It was the most well-planned, easy to execute part planning experience I\'ve ever had!"'
+                "It was the most well-planned, easy to execute part planning experience I've ever had!"
               }
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
-            <p className={styles.testimonial_date}> {new Date("7/6/2022").toLocaleDateString("en-US", {month: "long", year: "numeric"})}</p>
+            <p className={styles.testimonial_date}>
+              {" "}
+              {new Date("7/6/2022").toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
           </motion.div>
           <motion.div
             className={styles.testimonial}
@@ -124,16 +139,27 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className={styles.testimonial_title}>
-              &quot;Best Formal Event EVER!!&quot;
-            </p>
+            <img
+              src={john.src}
+              alt="John"
+              className={styles.testimonial_image}
+            />
+            <FontAwesomeIcon
+              icon={faQuoteLeft}
+              className={styles.testimonial_quote}
+            />
             <p className={styles.testimonial_desc}>
               {
-                '"It was the most well-planned, easy to execute part planning experience I\'ve ever had!"'
+                "It was the most well-planned, easy to execute part planning experience I've ever had!"
               }
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
-            <p className={styles.testimonial_date}>{new Date("3/14/2022").toLocaleDateString("en-US", {month: "long", year: "numeric"})}</p>
+            <p className={styles.testimonial_date}>
+              {new Date("3/14/2022").toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
           </motion.div>
           <motion.div
             className={styles.testimonial}
@@ -142,17 +168,27 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className={styles.testimonial_title}>
-              &quot;Best Formal Event EVER!!&quot;
-            </p>
-
+            <img
+              src={john.src}
+              alt="John"
+              className={styles.testimonial_image}
+            />
+            <FontAwesomeIcon
+              icon={faQuoteLeft}
+              className={styles.testimonial_quote}
+            />
             <p className={styles.testimonial_desc}>
               {
-                '"It was the most well-planned, easy to execute part planning experience I\'ve ever had!"'
+                "It was the most well-planned, easy to execute part planning experience I've ever had!"
               }
             </p>
             <p className={styles.testimonial_name}>John Josephsen</p>
-            <p className={styles.testimonial_date}>{new Date("5/16/2021").toLocaleDateString("en-US", {month: "long", year: "numeric"})}</p>
+            <p className={styles.testimonial_date}>
+              {new Date("5/16/2021").toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
           </motion.div>
         </motion.div>
       </div>

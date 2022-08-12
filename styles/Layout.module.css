@@ -151,7 +151,6 @@
   flex-direction: column;
   z-index: 3;
   padding: 16px;
-  transition: 0.3s;
   transform-origin: top;
 }
 
